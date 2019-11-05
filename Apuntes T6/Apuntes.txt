@@ -1,0 +1,67 @@
+TEMA 6 - APLICACIONES WEB
+
+    SAPI: Server Api 
+    - Es el contexto en donde se ejecuta el intérprete.
+    - El entorno que establece la interfaz de comunicación entre el script y el exterior.
+
+    Existen 3 SAPI:
+    - CLI (Command Line Interface).
+        $argc,$argv...
+
+    - Apache: Se trabaja a nivel Servidor Web
+        $_GET, $_POST...
+
+    - CGI: (Common Gateway Interface) 
+        Mecanismo clásico que existía antiguamente para realizar conexión  entre servidor y cliente.
+
+    
+    -- Configuración php.ini cli 
+        - error_reporting : configura los mensajes de error por la salida para desarrollo, produccion, etc.
+            - contiene: 
+                - default value
+                - development value 
+
+        - display_errors: Configura si se muestran los mensajes de error.
+
+        - display_startup_errors : Muestra los mensajes de error en el inicio del php
+
+        - date.timezone (trabajamos en UTC tanto en desarrollo como en producción) : Especifica en la hora en que trabajamos,es decir, la franja horaria.
+
+    Arrancar servidor en php:
+        - php -S localhost:8000,8080
+    
+    
+    Etiquetas:
+        - <?= expresión ?> es igual que <?php echo expresión ?>
+
+
+ORIENTACIÓN A OBJETOS:
+
+    - Asigna a una variable la propiedad o metodo de un objeto 
+        - $var -> timezone
+    - Saber si un objeto es una instancia de una clase
+        - $var -> instanceof Object
+
+    - Acceder a constantes:
+        - :: Operador de resolución de ámbito (Normalmente lo utilizamos sobre las clases)
+        - $var::ATOM , DateTime::ATOM
+        
+        - Comparar objetos:
+        - == comprobara si los dos objetos son instancias de la misma clase y tienen los mismos valores.
+        - === comprueba si los objetos además de tener los mismos valores, tienen la misma referencia.
+        
+        -- Clone:
+            - El Clone es un operador que permite realizar copias de otro objeto (no son identicos).
+
+        
+    PROPIEDADES
+       - Predeterminadas: las que vienen definidas en la clase del objeto.
+       - Dinámicas: se crean asignandole valores.
+       - Obtener variables de objetos: get_objects_var($a)
+       
+
+
+    
+
+
+
